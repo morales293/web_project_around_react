@@ -1,0 +1,143 @@
+.popup {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.popup_opened {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup__content {
+  position: relative;
+  width: 430px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 34px 36px 36px;
+  box-sizing: border-box;
+  color: #000;
+}
+
+.popup__content_type_image {
+  width: auto;
+  max-width: 75vw;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.popup__image {
+  display: block;
+  max-width: 75vw;
+  max-height: 75vh;
+  object-fit: contain;
+}
+
+.popup__caption {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.popup__close {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 34px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.popup__close:hover {
+  opacity: 0.6;
+}
+
+.popup__title {
+  margin: 0 0 54px;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.popup__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup__input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #c4c4c4;
+  padding-bottom: 12px;
+  margin-bottom: 30px;
+  outline: none;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.popup__button {
+  width: 100%;
+  height: 50px;
+  margin-top: 18px;
+  border: none;
+  border-radius: 2px;
+  background: #000;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.popup__button:hover {
+  opacity: 0.8;
+}
+
+.popup__error {
+  min-height: 14px;
+  color: red;
+  font-size: 12px;
+}
+
+.popup__input_type_error {
+  border-bottom: 1px solid red;
+}
+
+.popup__error_visible {
+  color: red;
+}
+
+@media screen and (max-width: 620px) {
+  .popup__content {
+    width: 282px;
+    padding: 25px 22px;
+  }
+
+  .popup__close {
+    right: 0;
+    top: -40px;
+  }
+
+  .popup__title {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+}
